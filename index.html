@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class='container'>
+    <div id='header-text'>
+    <h1>My Notes App</h1>
+    </div>
+    <div id='search-note'>
+        <label>
+            <input type='text' name='input-note' placeholder="Type to make your note or Search" autofocus/>
+            <p id='error-text'></p>
+        </label>
+        <div>
+            <button id='submit' onclick="addNoteToContainer()">Add Note</button>
+            <button id='search' onclick="searchNotes()">Search</button>
+        </div>
+    </div>
+    <div id='body-container'>
+        <div id='notes-container'>
+        </div>
+        <div id='search-container' onclick="removeSearch()">
+        </div>
+    </div>
+    </div>
+    <script src='./index.js'></script> 
+    <script src='./components/note.js' ></script>
+    <script>
+    </script>
+</body>
+</html>

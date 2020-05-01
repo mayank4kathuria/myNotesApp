@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #03a9f426;
+    height: 100%;
+}
+
+#body-container{
+    height: max(45%,303px);
+    width: 100%;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#search-note {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+#search-note > div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#search-note > label > input {
+    width: 100%;
+    padding: 2% 4%;
+}
+
+#error-text {
+    color: red;
+    margin-top: 0;
+    font-size: 13px;
+    padding-left: 3%;
+}
+
+#notes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#notes-container > .note{
+    margin-bottom: 10px;
+}
+
+.note {
+    width: 90%;
+}
+
+.note-body > input {
+    margin: 10px 0px 0 4%;
+    padding: 2px 5px;
+}
+
+.note-body > p {
+    margin-bottom: 0;
+    padding-left: 5%;
+}
+
+.note-body {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.note > .note {
+    margin-left: 40px;
+}
+
+.note-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    align-items: flex-end;
+}
+
+.note-buttons > :first-child {
+    color: #05228c;
+}
+
+.note-buttons > :last-child {
+    padding: 4px 10px;
+    background-color: tomato;
+    border-radius: 10px;
+}
+
+#search-container {
+    background-color: orange;
+    display: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    align-self: center;
+}
+
+
+@media screen and (min-width: 847px){
+    .note{
+        max-width: 70%;
+        min-width: 400px;
+    }
+
+    #notes-container{
+    width: 60%;
+    }
+
+    #error-text {
+        font-size: 13px;
+    }
+
+    #search-container {
+        width: 60%;
+    }
+}
+
