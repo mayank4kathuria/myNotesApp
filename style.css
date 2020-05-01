@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -82,12 +86,24 @@
 
 .note-buttons > :first-child {
     color: #05228c;
+    padding: 0.8% 3%;
+}
+
+.note-buttons > :first-child:hover {
+    color: #00104a;
+    background-color: #c1d2da;
+    border-radius: 5px;
 }
 
 .note-buttons > :last-child {
     padding: 4px 10px;
     background-color: tomato;
     border-radius: 10px;
+    font-weight: 700;
+}
+
+.note-buttons > :last-child:active {
+    background-color: #ff2700ed;
 }
 
 #search-container {
@@ -100,15 +116,21 @@
     align-self: center;
 }
 
+#search-container > p {
+    display: flex;
+    justify-content: center;
+}
 
-@media screen and (min-width: 847px){
+
+@media screen and (min-width: 847px) {
     .note{
         max-width: 70%;
         min-width: 400px;
     }
 
     #notes-container{
-    width: 60%;
+        width: 60%;
+        padding-left: 1%;
     }
 
     #error-text {

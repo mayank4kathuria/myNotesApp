@@ -1,6 +1,5 @@
 
 
-console.log('Hello chrome! ');
 const textNode = document.querySelector('[name=input-note]');
 const errorTextNode = document.querySelector('#error-text');
 const notesContainerNode = document.querySelector('#notes-container');
@@ -13,7 +12,8 @@ textNode.addEventListener('keypress', function(e){
 function addNoteToContainer(){
     errorTextNode.innerText = '';
     searchContainerNode.style.display = 'none';
-
+    notesContainerNode.style.display = '';
+    
     const text = textNode.value;
     if (text && text.length > 0) {
         const note = addNewNote();
@@ -21,7 +21,7 @@ function addNoteToContainer(){
         note.children[0].children[0].innerText = text;
         textNode.value = '';
         notesContainerNode.appendChild(note);
-        saveToLocalStorage();
+        //saveToLocalStorage();
     } else {
         const errortext = 'Empty Text not allowed';
         errorTextNode.innerText = errortext;
@@ -32,19 +32,28 @@ function searchNotes(){
     const searchStr = textNode.value;
     const noteBody = document.querySelector('#notes-container');
     const matched = searchNote(searchStr);
+
+    Array.from(searchContainerNode.children).forEach((note) => {
+        searchContainerNode.removeChild(note);
+    })
+
     if (matched.length > 0) {
         // drw a search canvas over top of existing notes!
-        Array.from(searchContainerNode.children).forEach((note) => {
-            searchContainerNode.removeChild(note);
-        })
         matched.forEach((note) => {
             searchContainerNode.appendChild(note);
         })
-        searchContainerNode.style.display = 'block';
-        noteBody.style.display = 'none';
+        // searchContainerNode.style.display = 'block';
+        // noteBody.style.display = 'none';
     } else {
         // drw a big canvas over top stating no match found!
+        const para = document.createElement('P');
+        para.innerText = 'No Note found!';
+        //para.style.display = '';
+        searchContainerNode.appendChild(para);
     }
+
+    searchContainerNode.style.display = 'block';
+    noteBody.style.display = 'none';
 }
 function removeSearch() {
     console.log('removed bro!');

@@ -54,7 +54,7 @@ const addSubNote = (rootNote) => {
     // append the sub note to parent note
     const newNote = addNewNote();
     rootNote.append(newNote);
-    saveToLocalStorage();
+    //saveToLocalStorage();
 }
 
 const searchNote = (str) => {
