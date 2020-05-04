@@ -1,0 +1,38 @@
+1) Things I was able to complete
+- Basic features, target - 1
+- Additional features
+ - Edit the text of note
+
+2) Things I was unable to complete
+- Additional features
+ - Searching with highlighting text and lineage of matching node.
+ - Delete notes
+
+3) Things I would have taken care of if you had more time (briefly mention how
+you would integrate that to your code)
+- Deletion of note, it was easy, just need to add a button which removes the current note from the DOM nodes and it's children.
+- Show the lineage of the matching note, For this one I will have used recursion wherein I would have localted the searched text
+  using the function created in basic features task and used it to move recursively to the top (base conditon would be reaching the root node), and then
+  appending the node to the DOM tree to show a lineage of matching note.
+- Btter design UI
+- Improved UX by adding little bits of handly features like autofocus on new note creating.  
+
+
+4) if your code handles SEO, accessibility, responsive design, performance, etc,
+mention that
+- My code isn't build keeping SEO in mind but I have taken care of basic SEO know hows like non blocking JS, addiing title and meta data.
+- My code follows the princicple of responsive design and is build using mobile first approach.
+- My code is performance as there is no unecessary attaching and de-attach of DOM node which is a very expensive computation. Additionally, using
+a very vanilla JS code will help in increasing performance as due to bare minimal code that needs to be run by the browser.
+
+
+5) And anything that you’d want to highlight during the evaluation of your code
+- This task was a very informative task for me though I do have experience coding in vanilla JS but my work in daily life
+usually require me to work on react and redux. hence, it was nice coding challenge.
+- Additionally, I have added few features from my side to this project as i felt they help in making this app more usuable like
+ - Autofocus on input field when user starts the app.
+ - Searching note using a singe input field.
+ - Input field validations and error handling.
+ - Made the code as performant as I could.
+ - The code is modular and could be reused with other project with minimal work.
+
